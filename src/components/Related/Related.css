@@ -1,0 +1,37 @@
+.related {
+    margin-top: 40px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+}
+
+.related ul {
+    display: flex;
+    gap: 5px;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.related li {
+    background: #EDEDF0;
+    border-radius: 99px;
+    padding: 6px 12px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.related li:hover {
+    background: #c0c0c0;
+}
+@media only screen and (max-width: 700px) {
+    .related {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}

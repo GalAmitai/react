@@ -1,0 +1,40 @@
+
+main .filter-bar {
+    width: 278px;
+    /* 208 logo + 70 gap */
+}
+
+.filter {
+    margin-bottom: 12px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.filter-bar .filter .title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+    main .filter-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+    }
+    main .filter-bar .filter {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    main .filter-bar {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,158 @@
+.product {
+    max-width: 259px;
+    width: 100%;
+    padding: 16px;
+}
+
+.product:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(59, 69, 123, 0.2), 0px 4px 8px rgba(92, 107, 192, 0.2);
+    border-radius: 8px;
+}
+
+.product-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+    grid-area: image;
+    height: 227px;
+}
+
+.view.list .product-image {
+    width: 300px;
+    height: 300px;
+}
+
+.view.list .product-image img {
+    height: auto;
+    width: 100%;
+}
+
+.product-image img {
+    width: 100%;
+}
+
+.description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.0275em;
+    color: #19191D;
+    margin-bottom: 8px;
+    height: 74px;
+    overflow: hidden;
+    grid-area: desc;
+}
+
+.price {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 18px;
+    grid-area: price;
+}
+
+.sub-desc {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: 0.018em;
+    color: #787885;
+    margin-bottom: 9px;
+    grid-area: sub-desc;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: actions;
+}
+
+.actions .rating {
+    font-size: 14px;
+}
+
+.actions .rating img:last-child {
+    margin-inline-end: 7px;
+}
+
+.actions button.watch-btn {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2264D1;
+    letter-spacing: 0.018em;
+    height: 32px;
+    width: 88px;
+    border: 1px solid #9DC2FF;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.actions button.watch-btn svg {
+    margin-right: 5px;
+    position: relative;
+    top: 1px;
+}
+
+.actions button.watch-btn.watch svg path{
+    fill: red;
+}
+
+@media only screen and (max-width: 1200px) {
+    .description {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .product {
+        max-width: 100%;
+    }
+
+    .view.list .product-image {
+        height: 70px;
+        width: 70px;
+    }
+
+    .view.list .product-image img {
+        width: 100%;
+        height: auto;
+        margin-right: 20px;
+    }
+
+    .view.list .description {
+        font-size: 12px;
+    }
+
+    .view.list .price {
+        font-size: 16px;
+    }
+
+    .view.list .sub-desc {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .products-list .view.list .product {
+        grid-template-areas:
+            'image desc desc desc desc desc'
+            'image price price price price price'
+            'image sub-desc sub-desc sub-desc sub-desc sub-desc'
+            'actions actions actions actions actions actions' !important;
+        box-sizing: border-box;
+    }
+
+    .products-list .view.list .actions {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
